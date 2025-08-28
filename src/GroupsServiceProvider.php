@@ -4,9 +4,9 @@ use Zaimea\GroupsSDKPHP;
 use Illuminate\Support\ServiceProvider;
 
 /**
- * AWS SDK for PHP service provider for Laravel applications
+ * Zaimea Groups SDK for PHP service provider for Laravel applications
  */
-class AwsServiceProvider extends ServiceProvider
+class GroupsServiceProvider extends ServiceProvider
 {
     const VERSION = '1.0';
 
