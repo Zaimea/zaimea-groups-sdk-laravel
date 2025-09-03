@@ -1,6 +1,10 @@
-<?php namespace Zaimea\GroupsSDK;
+<?php
 
-use Zaimea\GroupsClientInterface;
+declare(strict_types=1);
+
+namespace Zaimea\Laravel\Groups;
+
+use Zaimea\SDK\GroupsClientInterface;
 use Illuminate\Support\Facades\Facade;
 
 /**
