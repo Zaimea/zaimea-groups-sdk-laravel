@@ -1,6 +1,10 @@
-<?php namespace Zaimea\GroupsSDK;
+<?php
 
-use Zaimea\GroupsSDKPHP;
+declare(strict_types=1);
+
+namespace Zaimea\Laravel\Groups;
+
+use Zaimea\SDK\Groups;
 use Illuminate\Support\ServiceProvider;
 
 /**
@@ -45,10 +49,10 @@ class GroupsServiceProvider extends ServiceProvider
         $this->app->singleton('groups', function ($app) {
             $config = $app->make('config')->get('groups');
 
-            return new GroupsSDKPHP($config);
+            return new Groups($config);
         });
 
-        $this->app->alias('groups', 'Zaimea\GroupsSDKPHP');
+        $this->app->alias('groups', 'Zaimea\Groups');
     }
 
     /**
@@ -58,7 +62,7 @@ class GroupsServiceProvider extends ServiceProvider
      */
     public function provides()
     {
-        return ['groups', 'Zaimea\GroupsSDKPHP'];
+        return ['groups', 'Zaimea\Groups'];
     }
 
 }
